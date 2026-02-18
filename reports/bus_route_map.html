@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6295b26cc31828545a83ededf8b54cc7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 150px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity:0.8">
+     &nbsp;<b>Inefficiency Score</b> <br>
+     &nbsp;<i class="fa fa-circle" style="color:green"></i>&nbsp;Low (< 0.1)<br>
+     &nbsp;<i class="fa fa-circle" style="color:orange"></i>&nbsp;Moderate (< 0.2)<br>
+     &nbsp;<i class="fa fa-circle" style="color:red"></i>&nbsp;High (>= 0.2)<br>
+     </div>
+     
+    
+            <div class="folium-map" id="map_6295b26cc31828545a83ededf8b54cc7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6295b26cc31828545a83ededf8b54cc7 = L.map(
+                "map_6295b26cc31828545a83ededf8b54cc7",
+                {
+                    center: [11.0168, 76.9558],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_56bcbca31578cbf5315a84b8e812221c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_56bcbca31578cbf5315a84b8e812221c.addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var poly_line_71d62d7b54723c6ffdad6d9edc6baf91 = L.polyline(
+                [[11.0822, 76.9427], [11.0168, 76.9558]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            poly_line_71d62d7b54723c6ffdad6d9edc6baf91.bindTooltip(
+                `<div>
+                     Route 111 (Thudiyalur - Gandhipuram): Avg Inefficiency 0.33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8814f4f93ba4f5c7e6f22e58c274f915 = L.marker(
+                [11.0822, 76.9427],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_b08631c56d11093edd14accc5597799b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de8178578757ecdd988808e534318b00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b25d84e7b79c67ce43de742fa33f38c7 = $(`<div id="html_b25d84e7b79c67ce43de742fa33f38c7" style="width: 100.0%; height: 100.0%;">Start Route 111 (Thudiyalur - Gandhipuram)</div>`)[0];
+                popup_de8178578757ecdd988808e534318b00.setContent(html_b25d84e7b79c67ce43de742fa33f38c7);
+            
+        
+
+        marker_8814f4f93ba4f5c7e6f22e58c274f915.bindPopup(popup_de8178578757ecdd988808e534318b00)
+        ;
+
+        
+    
+    
+                marker_8814f4f93ba4f5c7e6f22e58c274f915.setIcon(icon_b08631c56d11093edd14accc5597799b);
+            
+    
+            var marker_daa3d581135029fb4c94fc556b7ab49b = L.marker(
+                [11.0168, 76.9558],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_6eeafce8c6b8b179447a139195881b6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_286c6f6e54e6849580e66733cc64cd70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45a34092b30114a64836dc9d3e712d5b = $(`<div id="html_45a34092b30114a64836dc9d3e712d5b" style="width: 100.0%; height: 100.0%;">End Route 111 (Thudiyalur - Gandhipuram)</div>`)[0];
+                popup_286c6f6e54e6849580e66733cc64cd70.setContent(html_45a34092b30114a64836dc9d3e712d5b);
+            
+        
+
+        marker_daa3d581135029fb4c94fc556b7ab49b.bindPopup(popup_286c6f6e54e6849580e66733cc64cd70)
+        ;
+
+        
+    
+    
+                marker_daa3d581135029fb4c94fc556b7ab49b.setIcon(icon_6eeafce8c6b8b179447a139195881b6a);
+            
+    
+            var poly_line_10154179c46ed28e5cd4cf3a415445c5 = L.polyline(
+                [[10.985, 76.918], [11.0287, 77.0305]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            poly_line_10154179c46ed28e5cd4cf3a415445c5.bindTooltip(
+                `<div>
+                     Route 2A (Perur - Polytechnic): Avg Inefficiency 0.34
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5e8636b8a175f9addb68f3861d60d0de = L.marker(
+                [10.985, 76.918],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_2eab1f73aafb593a37c9bade21de9e22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04227b10e332e5e566b61da462f4ed07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53fd3aaf7bff1cba004e8293fabe843c = $(`<div id="html_53fd3aaf7bff1cba004e8293fabe843c" style="width: 100.0%; height: 100.0%;">Start Route 2A (Perur - Polytechnic)</div>`)[0];
+                popup_04227b10e332e5e566b61da462f4ed07.setContent(html_53fd3aaf7bff1cba004e8293fabe843c);
+            
+        
+
+        marker_5e8636b8a175f9addb68f3861d60d0de.bindPopup(popup_04227b10e332e5e566b61da462f4ed07)
+        ;
+
+        
+    
+    
+                marker_5e8636b8a175f9addb68f3861d60d0de.setIcon(icon_2eab1f73aafb593a37c9bade21de9e22);
+            
+    
+            var marker_a7c8764a23245bd8b6388792e01f20ec = L.marker(
+                [11.0287, 77.0305],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_9b53b76a26948e82b9f2d703a8897117 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0723a7086a3fe5fe8ea488bfb14fbe92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d261fc34cb0baf60160e9be3f034ea43 = $(`<div id="html_d261fc34cb0baf60160e9be3f034ea43" style="width: 100.0%; height: 100.0%;">End Route 2A (Perur - Polytechnic)</div>`)[0];
+                popup_0723a7086a3fe5fe8ea488bfb14fbe92.setContent(html_d261fc34cb0baf60160e9be3f034ea43);
+            
+        
+
+        marker_a7c8764a23245bd8b6388792e01f20ec.bindPopup(popup_0723a7086a3fe5fe8ea488bfb14fbe92)
+        ;
+
+        
+    
+    
+                marker_a7c8764a23245bd8b6388792e01f20ec.setIcon(icon_9b53b76a26948e82b9f2d703a8897117);
+            
+    
+            var poly_line_76e73b12486bb9b06d8faf40104d2fc9 = L.polyline(
+                [[11.0168, 76.9558], [11.0822, 76.9427]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            poly_line_76e73b12486bb9b06d8faf40104d2fc9.bindTooltip(
+                `<div>
+                     Route 32 (Gandhipuram - Thudiyalur): Avg Inefficiency 0.33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5f3faf9dcb8b37e4d6d4d2bd616809c7 = L.marker(
+                [11.0168, 76.9558],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_6b40d25f49fd72049af0e713111ecc67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1377855d0a27e3570ca2b7d987c65e28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1af7dcab92308b5ca69ece2dc298427a = $(`<div id="html_1af7dcab92308b5ca69ece2dc298427a" style="width: 100.0%; height: 100.0%;">Start Route 32 (Gandhipuram - Thudiyalur)</div>`)[0];
+                popup_1377855d0a27e3570ca2b7d987c65e28.setContent(html_1af7dcab92308b5ca69ece2dc298427a);
+            
+        
+
+        marker_5f3faf9dcb8b37e4d6d4d2bd616809c7.bindPopup(popup_1377855d0a27e3570ca2b7d987c65e28)
+        ;
+
+        
+    
+    
+                marker_5f3faf9dcb8b37e4d6d4d2bd616809c7.setIcon(icon_6b40d25f49fd72049af0e713111ecc67);
+            
+    
+            var marker_34b71b65d2cd01bc2bff85140cbfbec2 = L.marker(
+                [11.0822, 76.9427],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_69fb70430c52913981afce99a1c86736 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1d1124355a32a8e1c34ab3c827ca6f7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adb8cd15fab877d5e5ec993519228c62 = $(`<div id="html_adb8cd15fab877d5e5ec993519228c62" style="width: 100.0%; height: 100.0%;">End Route 32 (Gandhipuram - Thudiyalur)</div>`)[0];
+                popup_e1d1124355a32a8e1c34ab3c827ca6f7.setContent(html_adb8cd15fab877d5e5ec993519228c62);
+            
+        
+
+        marker_34b71b65d2cd01bc2bff85140cbfbec2.bindPopup(popup_e1d1124355a32a8e1c34ab3c827ca6f7)
+        ;
+
+        
+    
+    
+                marker_34b71b65d2cd01bc2bff85140cbfbec2.setIcon(icon_69fb70430c52913981afce99a1c86736);
+            
+    
+            var poly_line_e39cc01a512f84ca9a3a18ce7974922a = L.polyline(
+                [[11.0168, 76.9558], [11.3006, 76.9366]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            poly_line_e39cc01a512f84ca9a3a18ce7974922a.bindTooltip(
+                `<div>
+                     Route 33A (Gandhipuram - Mettupalayam): Avg Inefficiency 0.32
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_10e6c3d41560dd953d2f809e76586ca0 = L.marker(
+                [11.0168, 76.9558],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_0aef01dc1a9f96cae44448432469f181 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bcf1f0761c93f045deb0a5cdb8379fcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7549aee3833c1e81ae81390096e9821 = $(`<div id="html_d7549aee3833c1e81ae81390096e9821" style="width: 100.0%; height: 100.0%;">Start Route 33A (Gandhipuram - Mettupalayam)</div>`)[0];
+                popup_bcf1f0761c93f045deb0a5cdb8379fcb.setContent(html_d7549aee3833c1e81ae81390096e9821);
+            
+        
+
+        marker_10e6c3d41560dd953d2f809e76586ca0.bindPopup(popup_bcf1f0761c93f045deb0a5cdb8379fcb)
+        ;
+
+        
+    
+    
+                marker_10e6c3d41560dd953d2f809e76586ca0.setIcon(icon_0aef01dc1a9f96cae44448432469f181);
+            
+    
+            var marker_c236c566022e8d0be8613d8d38b63811 = L.marker(
+                [11.3006, 76.9366],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_c4e31cd803239132e8d0ed99c31b3a18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1999634b1a22582f2fe6997afc1e9d7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a023663d7573eb4810583c700dd74a69 = $(`<div id="html_a023663d7573eb4810583c700dd74a69" style="width: 100.0%; height: 100.0%;">End Route 33A (Gandhipuram - Mettupalayam)</div>`)[0];
+                popup_1999634b1a22582f2fe6997afc1e9d7b.setContent(html_a023663d7573eb4810583c700dd74a69);
+            
+        
+
+        marker_c236c566022e8d0be8613d8d38b63811.bindPopup(popup_1999634b1a22582f2fe6997afc1e9d7b)
+        ;
+
+        
+    
+    
+                marker_c236c566022e8d0be8613d8d38b63811.setIcon(icon_c4e31cd803239132e8d0ed99c31b3a18);
+            
+    
+            var poly_line_18cacca4096651bf6164e5acd989b1de = L.polyline(
+                [[11.0822, 76.9427], [10.9634, 76.9804]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            poly_line_18cacca4096651bf6164e5acd989b1de.bindTooltip(
+                `<div>
+                     Route 4A (Thudiyalur - Podanur): Avg Inefficiency 0.33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3de21422a16c56421eb97868fd265754 = L.marker(
+                [11.0822, 76.9427],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_a220c4c53126b2f1e3762e14a581bef3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5eccfcc0afeb9f8b356391d82021580 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2b0d90053ef50511172ff31db88a3f2 = $(`<div id="html_c2b0d90053ef50511172ff31db88a3f2" style="width: 100.0%; height: 100.0%;">Start Route 4A (Thudiyalur - Podanur)</div>`)[0];
+                popup_f5eccfcc0afeb9f8b356391d82021580.setContent(html_c2b0d90053ef50511172ff31db88a3f2);
+            
+        
+
+        marker_3de21422a16c56421eb97868fd265754.bindPopup(popup_f5eccfcc0afeb9f8b356391d82021580)
+        ;
+
+        
+    
+    
+                marker_3de21422a16c56421eb97868fd265754.setIcon(icon_a220c4c53126b2f1e3762e14a581bef3);
+            
+    
+            var marker_7227e6f8110584d0abd7af828cb6296e = L.marker(
+                [10.9634, 76.9804],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_3e2567fc3ad99619c2b277b3478ab829 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a073b39aa59b31f3830cea8de54ece64 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ede357f814726d38c91f969606113ad9 = $(`<div id="html_ede357f814726d38c91f969606113ad9" style="width: 100.0%; height: 100.0%;">End Route 4A (Thudiyalur - Podanur)</div>`)[0];
+                popup_a073b39aa59b31f3830cea8de54ece64.setContent(html_ede357f814726d38c91f969606113ad9);
+            
+        
+
+        marker_7227e6f8110584d0abd7af828cb6296e.bindPopup(popup_a073b39aa59b31f3830cea8de54ece64)
+        ;
+
+        
+    
+    
+                marker_7227e6f8110584d0abd7af828cb6296e.setIcon(icon_3e2567fc3ad99619c2b277b3478ab829);
+            
+    
+            var poly_line_437a6789c7e88523340dbbabf009fbe0 = L.polyline(
+                [[11.0168, 76.9558], [11.0422, 76.877]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            poly_line_437a6789c7e88523340dbbabf009fbe0.bindTooltip(
+                `<div>
+                     Route 70 (Gandhipuram - Maruthamalai): Avg Inefficiency 0.33
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_71baf38d355c59b340f04bea34cef275 = L.marker(
+                [11.0168, 76.9558],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_8ce22721092843d9906d9075d3f874e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4680fd4d1f6c48156b6a001b1c19682a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e2f150ef50ce882e52f1961fa3cc0ad = $(`<div id="html_4e2f150ef50ce882e52f1961fa3cc0ad" style="width: 100.0%; height: 100.0%;">Start Route 70 (Gandhipuram - Maruthamalai)</div>`)[0];
+                popup_4680fd4d1f6c48156b6a001b1c19682a.setContent(html_4e2f150ef50ce882e52f1961fa3cc0ad);
+            
+        
+
+        marker_71baf38d355c59b340f04bea34cef275.bindPopup(popup_4680fd4d1f6c48156b6a001b1c19682a)
+        ;
+
+        
+    
+    
+                marker_71baf38d355c59b340f04bea34cef275.setIcon(icon_8ce22721092843d9906d9075d3f874e1);
+            
+    
+            var marker_d22551a60c751cad5b62820bb6cd1185 = L.marker(
+                [11.0422, 76.877],
+                {
+}
+            ).addTo(map_6295b26cc31828545a83ededf8b54cc7);
+        
+    
+            var icon_f82fcae212e295dd4b97a4a6365d804e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d515631abec5533943c3fff0e98f4907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9513207ee47aa975da7e0231fb0e0dac = $(`<div id="html_9513207ee47aa975da7e0231fb0e0dac" style="width: 100.0%; height: 100.0%;">End Route 70 (Gandhipuram - Maruthamalai)</div>`)[0];
+                popup_d515631abec5533943c3fff0e98f4907.setContent(html_9513207ee47aa975da7e0231fb0e0dac);
+            
+        
+
+        marker_d22551a60c751cad5b62820bb6cd1185.bindPopup(popup_d515631abec5533943c3fff0e98f4907)
+        ;
+
+        
+    
+    
+                marker_d22551a60c751cad5b62820bb6cd1185.setIcon(icon_f82fcae212e295dd4b97a4a6365d804e);
+            
+</script>
+</html>

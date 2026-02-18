@@ -1,0 +1,12 @@
+Route,Issue,Action
+2A (Perur - Polytechnic),High Inefficiency (> 0.25),Increase frequency during peak hours & review schedule
+32 (Gandhipuram - Thudiyalur),High Inefficiency (> 0.25),Increase frequency during peak hours & review schedule
+111 (Thudiyalur - Gandhipuram),High Inefficiency (> 0.25),Increase frequency during peak hours & review schedule
+4A (Thudiyalur - Podanur),High Inefficiency (> 0.25),Increase frequency during peak hours & review schedule
+70 (Gandhipuram - Maruthamalai),High Inefficiency (> 0.25),Increase frequency during peak hours & review schedule
+33A (Gandhipuram - Mettupalayam),High Inefficiency (> 0.25),Increase frequency during peak hours & review schedule
+ALL,Significant Peak Congestion (+669%),Reschedule departure times to buffer peak delays
+2A (Perur - Polytechnic),High Delay Variability (Std Dev > 10m),Investigate inconsistent traffic patterns or driver performance
+33A (Gandhipuram - Mettupalayam),High Delay Variability (Std Dev > 10m),Investigate inconsistent traffic patterns or driver performance
+4A (Thudiyalur - Podanur),High Delay Variability (Std Dev > 10m),Investigate inconsistent traffic patterns or driver performance
+70 (Gandhipuram - Maruthamalai),High Delay Variability (Std Dev > 10m),Investigate inconsistent traffic patterns or driver performance

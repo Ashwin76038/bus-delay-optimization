@@ -1,0 +1,27 @@
+----------------------------------------
+BUS DELAY ANALYTICS SUMMARY REPORT
+----------------------------------------
+Date Generated: 2026-02-18 08:52:03
+
+KEY METRICS:
+- Overall Average Delay: 16.14 min
+- 95th Percentile Delay: 43.00 min
+- Worst Performing Route: 33A (Gandhipuram - Mettupalayam) (Avg 24.39 min)
+- Most Congested Hour:    9:00 (Avg 19.39 min)
+- Top Inefficient Route:  2A (Perur - Polytechnic) (Score 0.34)
+
+----------------------------------------
+AUTOMATED RECOMMENDATIONS:
+1. Route 2A (Perur - Polytechnic): High Inefficiency (> 0.25) -> Increase frequency during peak hours & review schedule
+2. Route 32 (Gandhipuram - Thudiyalur): High Inefficiency (> 0.25) -> Increase frequency during peak hours & review schedule
+3. Route 111 (Thudiyalur - Gandhipuram): High Inefficiency (> 0.25) -> Increase frequency during peak hours & review schedule
+4. Route 4A (Thudiyalur - Podanur): High Inefficiency (> 0.25) -> Increase frequency during peak hours & review schedule
+5. Route 70 (Gandhipuram - Maruthamalai): High Inefficiency (> 0.25) -> Increase frequency during peak hours & review schedule
+6. Route 33A (Gandhipuram - Mettupalayam): High Inefficiency (> 0.25) -> Increase frequency during peak hours & review schedule
+7. Route ALL: Significant Peak Congestion (+669%) -> Reschedule departure times to buffer peak delays
+8. Route 2A (Perur - Polytechnic): High Delay Variability (Std Dev > 10m) -> Investigate inconsistent traffic patterns or driver performance
+9. Route 33A (Gandhipuram - Mettupalayam): High Delay Variability (Std Dev > 10m) -> Investigate inconsistent traffic patterns or driver performance
+10. Route 4A (Thudiyalur - Podanur): High Delay Variability (Std Dev > 10m) -> Investigate inconsistent traffic patterns or driver performance
+11. Route 70 (Gandhipuram - Maruthamalai): High Delay Variability (Std Dev > 10m) -> Investigate inconsistent traffic patterns or driver performance
+
+----------------------------------------
